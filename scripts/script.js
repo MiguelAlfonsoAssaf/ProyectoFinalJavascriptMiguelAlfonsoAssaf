@@ -61,10 +61,31 @@ function agregoCarrito(event){
 // funcion que agrega un nodo "p" a la seccion item_compras
 function agregoCarritoHTML(producto){
 let divitems=document.getElementById("items_compra");
+
+let divItemBoton=document.createElement("div");
+divItemBoton.setAttribute("class","item_resumen_compras")
+
 let item=document.createElement("p");
 item.innerText=producto.nombre + "\t" + " x " + producto.cantidad + "\t .Precio Unidad:" + producto.precio;
 item.setAttribute("id",producto.nombre)
-divitems.appendChild(item);
+
+let btnborrar=document.createElement("button");
+btnborrar.innerText="x";
+btnborrar.setAttribute("class","boton_borrar");
+btnborrar.setAttribute("value",producto.nombre);
+
+divItemBoton.appendChild(item);
+divItemBoton.appendChild(btnborrar);
+divitems.appendChild(divItemBoton);
+
+////////////aca me quede, hayq que hacer una funcion que borre elpadre:
+let botones_borrar=document.getElementsByClassName("boton_borrar");
+for (const btn of botones_borrar) {
+    btn.addEventListener("click",(event)=>console.log(event.target.value));
+}
+
+
+
 }
 
 // si existe el nodo dentro de item_compras se actualiza el innertext para agregar la cantidad.
@@ -72,3 +93,4 @@ function agregoCarritoRepetido(producto){
     let itemrepetido=document.getElementById(producto.nombre);
     itemrepetido.innerText=producto.nombre + "\t" + " x " + producto.cantidad + "\t .Precio Unidad:" + producto.precio;
 }
+

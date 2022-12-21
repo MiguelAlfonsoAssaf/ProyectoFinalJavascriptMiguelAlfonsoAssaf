@@ -161,25 +161,58 @@ input {
 }
 
 @keyframes w1anim {
-    0% {opacity: 0;}
-    5% {opacity: 1;}
-    28% {opacity: 1;}
-    33% {opacity: 0;}
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    28% {
+        opacity: 1;
+    }
+
+    33% {
+        opacity: 0;
+    }
 }
 
 
 @keyframes w2anim {
-    33% {opacity: 0;}
-    38% {opacity: 1;}
-    61% {opacity: 1;}
-    66% {opacity: 0;}
+    33% {
+        opacity: 0;
+    }
+
+    38% {
+        opacity: 1;
+    }
+
+    61% {
+        opacity: 1;
+    }
+
+    66% {
+        opacity: 0;
+    }
 }
 
 @keyframes w3anim {
-    66% {opacity: 0;}
-    71% {opacity: 1;}
-    95% {opacity: 1;}
-    100% {opacity: 0;}
+    66% {
+        opacity: 0;
+    }
+
+    71% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 
@@ -569,30 +602,31 @@ footer img {
     height: auto;
 }
 
-.area-banner{
+.area-banner {
     grid-area: ban;
 }
 
-.area-zapatos{
+.area-zapatos {
     grid-area: zap;
 }
 
-.area-mocasines{
+.area-mocasines {
     grid-area: moc;
 }
-.area-caperas{
+
+.area-caperas {
     grid-area: camp;
 }
 
 
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
 
     .main-productos {
         margin-bottom: 10px;
         display: grid;
         grid-template-columns: 65% auto;
-        grid-template-rows: repeat(3,auto);
+        grid-template-rows: repeat(3, auto);
         gap: 5px 5px;
 
         grid-template-areas:
@@ -600,12 +634,12 @@ footer img {
             "ban ban ban camp"
             "zap zap zap camp";
         gap: 10px 10px;
-        
+
     }
 
-.banner_tarjeta{
-    margin: 0;
-}
+    .banner_tarjeta {
+        margin: 0;
+    }
 
 }
 
@@ -808,7 +842,7 @@ input[type=submit]:hover {
     color: #FFFFFF;
     cursor: pointer;
     display: inline-block;
-    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 10px;
     font-weight: 500;
     line-height: 2.5;
@@ -825,12 +859,22 @@ input[type=submit]:hover {
     width: 80px;
     text-align: center;
 
-  }
-  
-  .button-62:not([disabled]):focus {
+}
+
+.button-62:not([disabled]):focus {
     box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
-  }
-  
-  .button-62:not([disabled]):hover {
+}
+
+.button-62:not([disabled]):hover {
     box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
-  }
+}
+
+
+.item_resumen_compras {
+    display: flex;
+}
+
+.boton_borrar {
+    margin-left: 5px;
+    height: auto;
+}
