@@ -27,6 +27,30 @@ class producto {
     }
 }
 
+
+//boton comprar con sweet alert
+const btn_comprar = document.getElementById("boton_sweet");
+btn_comprar.addEventListener('click', () => {
+    Swal.fire({
+        icon: 'success',
+        title: 'Su compra fue realizada!!',
+        text: 'Something went wrong!',
+        footer: '<a href="">Why do I have this issue?</a>'
+    })
+
+})
+
+// //boton toastify
+// const btn_toastify = document.getElementById("boton_toastify");
+// btn_toastify.addEventListener('click',()=>{
+//     Toastify({
+//         text: "This is a toast",
+//         duration: 3000
+//         }).showToast();
+// })
+
+
+
 //array de productos:
 let carrito = [];
 
@@ -51,7 +75,7 @@ if (carritioTransformado != null && carritioTransformado.length !== 0) {
     // cuando vuelvo a cargar el carrito con el metodo slice (de lo que recupero del localStorage), me da un error. 
     // ese error seria porque son objetos pero no de la clase PRODUCTO?????????? ya que estoy haciendo uso del metodo "agregoUno"
     for (const ele of carritioTransformado) {
-        carrito.push(new producto(ele.nombre,ele.precio,ele.cantidad));
+        carrito.push(new producto(ele.nombre, ele.precio, ele.cantidad));
     }
     for (const elem of carrito) {
         agregoCarritoHTML(elem);
@@ -141,17 +165,22 @@ function borrarCarrito() {
     let borraCarrito = document.getElementById("items_compra");
     borraCarrito.innerHTML = '';
     totales()
+
+    Toastify({
+        text: "Carrito limpio",
+        duration: 3000
+        }).showToast();
 }
 
-function totales(){
-    if(carrito.length===0){
-        document.getElementById("totales").innerText='';
-    }else {
-        let total=0;
+function totales() {
+    if (carrito.length === 0) {
+        document.getElementById("totales").innerText = '';
+    } else {
+        let total = 0;
         for (const elem of carrito) {
-            total=total + (elem.precio*elem.cantidad);
+            total = total + (elem.precio * elem.cantidad);
         }
-        let tot=document.getElementById("totales");
-        tot.innerText="Total sin IVA: "+ total.toString() + "\n" + "IVA: " +(total*0.21).toString() + "\n" + "TOTAL con IVA: " + (total*1.21).toString();
+        let tot = document.getElementById("totales");
+        tot.innerText = "Total sin IVA: " + total.toString() + "\n" + "IVA: " + (total * 0.21).toString() + "\n" + "TOTAL con IVA: " + (total * 1.21).toString();
     }
 }
