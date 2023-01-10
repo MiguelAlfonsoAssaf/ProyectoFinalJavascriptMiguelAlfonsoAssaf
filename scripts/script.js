@@ -56,7 +56,7 @@ let carrito = [];
 
 
 
-//agrego eventos a los botones con la clase button-62
+//agrego eventos a los botones comprar con la clase button-62
 let botas = document.getElementsByClassName("button-62");
 for (const bota of botas) {
     bota.addEventListener("click", agregoCarrito);
@@ -95,14 +95,14 @@ function agregoCarrito(event) {
         carrito[indice].agregoUno();
         agregoCarritoRepetido(carrito[indice]);
         carritoStorage();
-        totales()
+        totales();
     } else {
         let elemento = lista_productos.find((elem) => elem.nombre == event.target.value);
         let nuevoproducto = new producto(elemento.nombre, elemento.precio, 1);
         agregoCarritoHTML(nuevoproducto);
         carrito.push(nuevoproducto);
         carritoStorage();
-        totales()
+        totales();
     }
     console.log(carrito);
 }

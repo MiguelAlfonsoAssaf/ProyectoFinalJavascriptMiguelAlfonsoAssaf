@@ -62,6 +62,9 @@ input {
     grid-area: camp;
 }
 
+.area-carrito{
+    grid-area:car;
+}
 
 
 @media (min-width: 768px) {
@@ -76,7 +79,8 @@ input {
         grid-template-areas:
             "moc moc moc camp "
             "ban ban ban camp"
-            "zap zap zap camp";
+            "zap zap zap camp"
+            "car car car car";
         gap: 10px 10px;
 
     }
