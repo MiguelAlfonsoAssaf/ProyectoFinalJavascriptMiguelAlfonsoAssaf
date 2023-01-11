@@ -62,9 +62,7 @@ input {
     grid-area: camp;
 }
 
-.area-carrito{
-    grid-area:car;
-}
+
 
 
 @media (min-width: 768px) {
@@ -83,10 +81,6 @@ input {
             "car car car car";
         gap: 10px 10px;
 
-    }
-
-    .banner_tarjeta {
-        margin: 0;
     }
 
 }
@@ -206,4 +200,105 @@ input {
 .boton_borrar {
     margin-left: 5px;
     height: auto;
+}
+
+
+
+/* CARRITO */
+
+.area-carrito {
+    grid-area: car;
+    background-color:rgb(243, 243, 243);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+
+
+
+.contenedor_producto_carrito {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: white;
+    row-gap: 5px;
+    
+
+}
+
+
+
+.producto_carrito{
+    display: flex;
+    justify-content: center;
+}
+
+.foto_producto_carrito {
+    width: 100px;
+    height: 100px;
+}
+
+.foto_producto_carrito img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.texto_producto_carrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 20px 0 20px;
+}
+
+.boton_producto_carrito {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgb(112, 112, 255);
+}
+
+.boton_producto_carrito:hover {
+    color: blue;
+}
+
+
+.cantidad_producto_carrito {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.cantidad_producto_carrito button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: rgb(149, 115, 52);
+    font-size: 1.5rem;
+}
+
+
+.cantidad_producto_carrito button:hover{
+    color: rgb(91, 71, 33);
+}
+
+.cantidad_producto_carrito .menos{
+    font-size: 2.5rem;
+}
+
+
+.precio_producto_carrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
 }

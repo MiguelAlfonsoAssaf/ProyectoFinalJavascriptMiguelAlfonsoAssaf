@@ -40,14 +40,6 @@ btn_comprar.addEventListener('click', () => {
 
 })
 
-// //boton toastify
-// const btn_toastify = document.getElementById("boton_toastify");
-// btn_toastify.addEventListener('click',()=>{
-//     Toastify({
-//         text: "This is a toast",
-//         duration: 3000
-//         }).showToast();
-// })
 
 
 
@@ -184,3 +176,6 @@ function totales() {
         tot.innerText = "Total sin IVA: " + total.toString() + "\n" + "IVA: " + (total * 0.21).toString() + "\n" + "TOTAL con IVA: " + (total * 1.21).toString();
     }
 }
+
+
+
