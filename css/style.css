@@ -271,11 +271,17 @@ input {
 
 .cantidad_producto_carrito {
     display: flex;
-    gap: 5px;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px;
 }
+
+.cantidad_producto_carrito span{
+    font-size: 0.7rem;
+}
+
+
 
 
 .cantidad_producto_carrito button{
@@ -284,6 +290,15 @@ input {
     cursor: pointer;
     color: rgb(149, 115, 52);
     font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn_cantidad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 

@@ -3,48 +3,48 @@
         "nombre": "mocasin",
         "precio": 10,
         "descripcion_corta": "Lorem ipsum dolor sit amet.",
-        "descirpcion_larga": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, deserunt!",
-        "cantidad": 20,
+        "descripcion_larga": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, deserunt!",
+        "cantidad": 10,
         "foto":"./assets/img/dor_moc1.jpg"
     },
     {
         "nombre": "mocasinbm",
         "precio": 10,
         "descripcion_corta": "Lorem ipsum dolor sit amet.",
-        "descirpcion_larga": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, deserunt!",
-        "cantidad": 10,
+        "descripcion_larga": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, deserunt!",
+        "cantidad": 20,
         "foto":"./assets/img/dor_moc2.jpg"
     },
     {
         "nombre": "oxfords",
         "precio": 10,
         "descripcion_corta": "Lorem ipsum dolor sit amet.",
-        "descirpcion_larga": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, deserunt!",
-        "cantidad": 10,
+        "descripcion_larga": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, deserunt!",
+        "cantidad": 15,
         "foto":"./assets/img/dor_moc3.jpg"
     },
     {
         "nombre": "botasbm",
         "precio": 10,
         "descripcion_corta": "Lorem ipsum dolor sit amet.",
-        "descirpcion_larga": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, deserunt!",
-        "cantidad": 10,
+        "descripcion_larga": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, deserunt!",
+        "cantidad": 5,
         "foto":"./assets/img/dor1.jpg"
     },
     {
         "nombre": "botasnegras",
         "precio": 10,
         "descripcion_corta": "Lorem ipsum dolor sit amet.",
-        "descirpcion_larga": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, deserunt!",
-        "cantidad": 10,
+        "descripcion_larga": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, deserunt!",
+        "cantidad": 2,
         "foto":"./assets/img/dor2.jpg"
     },
     {
         "nombre": "botastexanas",
         "precio": 10,
         "descripcion_corta": "Lorem ipsum dolor sit amet.",
-        "descirpcion_larga": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, deserunt!",
-        "cantidad": 10,
+        "descripcion_larga": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, deserunt!",
+        "cantidad": 3,
         "foto":"./assets/img/dor3.jpg"
     }
 ]
