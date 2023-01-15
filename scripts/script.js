@@ -18,7 +18,7 @@ let lista_productos = [];
 // }
 
 async function getData() {
-    lista_productos=[];
+    lista_productos = [];
     const response = await fetch('./data/data.json');
     const lista = await response.json();
     lista.forEach(element => lista_productos.push(element));
@@ -27,7 +27,7 @@ async function getData() {
 getData();
 
 async function render(producto) {
-    lista_productos=[];
+    lista_productos = [];
     const response = await fetch('./data/data.json');
     const lista = await response.json();
     lista.forEach(element => lista_productos.push(element));
@@ -99,9 +99,8 @@ if (carritioTransformado != null && carritioTransformado.length !== 0) {
     for (const elem of carrito) {
         render(elem);
     }
+    totales();
 }
-console.log("este es el carrito:", carrito);
-
 
 
 // Funcion que dispara el evento:
@@ -122,6 +121,7 @@ function agregoCarrito(event) {
         agregoCarritoHTML_V2(nuevoproducto);
         carrito.push(nuevoproducto);
         carritoStorage();
+        totales();
     }
 }
 
@@ -167,6 +167,7 @@ function agregoCarritoHTML_V2(producto) {
         let indice = carrito.findIndex(indiceCarrito);
         carrito.splice(indice, 1);
         carritoStorage();
+        totales();
     });
     divTextoProducto.appendChild(tituloTextoProducto);
     divTextoProducto.appendChild(descTextoProducto);
@@ -188,6 +189,7 @@ function agregoCarritoHTML_V2(producto) {
             document.getElementById(producto.nombre + "cantidad").innerText = carrito[indice].cantidad;
             document.getElementById(producto.nombre + "precio").innerText = (carrito[indice].cantidad * carrito[indice].precio).toString() + "$";
             carritoStorage();
+            totales();
         } else {
             Swal.fire({
                 icon: 'success',
@@ -210,7 +212,9 @@ function agregoCarritoHTML_V2(producto) {
             let indice = carrito.findIndex(indiceCarrito);
             carrito[indice].restoUno();
             document.getElementById(producto.nombre + "cantidad").innerText = carrito[indice].cantidad;
+            document.getElementById(producto.nombre + "precio").innerText = (carrito[indice].cantidad * carrito[indice].precio).toString() + "$";
             carritoStorage();
+            totales();
         }
     });
     divBtn_cantidad.appendChild(masCantidadProducto);
@@ -257,7 +261,7 @@ function borrarCarrito() {
     carrito = [];
     let borraCarrito = document.getElementById("contenedor_carrito");
     borraCarrito.innerHTML = '';
-    // totales()
+    totales()
 
     Toastify({
         text: "Carrito limpio",
@@ -274,7 +278,7 @@ function totales() {
             total = total + (elem.precio * elem.cantidad);
         }
         let tot = document.getElementById("totales");
-        tot.innerText = "Total sin IVA: " + total.toString() + "\n" + "IVA: " + (total * 0.21).toString() + "\n" + "TOTAL con IVA: " + (total * 1.21).toString();
+        tot.innerText = "Total sin IVA: " + total.toString() + "\n" + "IVA: " + ((total * 0.21).toFixed(2)).toString() + "\n" + "TOTAL con IVA: " + ((total * 1.21).toFixed(2)).toString();
     }
 }
 

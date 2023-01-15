@@ -75,10 +75,10 @@ input {
         gap: 5px 5px;
 
         grid-template-areas:
-            "moc moc moc camp "
+            "moc moc moc camp"
             "ban ban ban camp"
             "zap zap zap camp"
-            "car car car car";
+            "car car tot tot";
         gap: 10px 10px;
 
     }
@@ -204,21 +204,23 @@ input {
 
 
 
-/* CARRITO */
+/* CARRITO /////////////////////////////////////////////////////////*/
 
 .area-carrito {
+    width: 100%;
     grid-area: car;
     background-color:rgb(243, 243, 243);
     display: flex;
     justify-content: center;
     padding-bottom: 10px;
+    border-radius: 20px;
 }
 
 
 
 
 .contenedor_producto_carrito {
-    width: 60%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -316,4 +318,30 @@ input {
     justify-content: center;
     align-items: center;
     padding-left: 10px;
+}
+
+
+
+/* TOTALES */
+
+.totales {
+    grid-area: tot;
+    width: 100%;
+    height: 60%;
+    background-color: #ef476642;
+    border-radius: 20px;
+
+}
+
+
+.contenedor_totales{
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor_botones{
+
 }
