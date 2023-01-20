@@ -62,8 +62,8 @@ btn_comprar.addEventListener('click', () => {
     Swal.fire({
         icon: 'success',
         title: 'Su compra fue realizada!!',
-        text: 'Something went wrong!',
-        footer: '<a href="">Why do I have this issue?</a>'
+        // text: 'Something went wrong!',
+        // footer: '<a href="">Why do I have this issue?</a>'
     })
 
 })
@@ -193,9 +193,9 @@ function agregoCarritoHTML_V2(producto) {
         } else {
             Swal.fire({
                 icon: 'success',
-                title: 'nos quedamos sin stock',
-                text: 'Something went wrong!',
-                footer: '<a href="">Why do I have this issue?</a>'
+                title: 'Stock Máximo',
+                // text: 'Something went wrong!',
+                // footer: '<a href="">Why do I have this issue?</a>'
             })
         }
     });
